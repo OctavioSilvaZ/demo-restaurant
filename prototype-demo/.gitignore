@@ -1,0 +1,14 @@
+#Variables de entorno
+.env*
+
+# Archivos de compilación
+/target
+
+
+# Configuración de IDEs
+*.iml
+.idea/
+.vscode/
+*.classpath
+*.project
+*.settings/
