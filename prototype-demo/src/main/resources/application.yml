@@ -4,3 +4,8 @@ spring:
       host: ${BD_HOST}
       port: ${BD_PORT}
       database: ${DB_NAME}
+server:
+  port: ${SERVER_PORT}
+
+jwt:
+  secret: "${JWT_SECRET}"

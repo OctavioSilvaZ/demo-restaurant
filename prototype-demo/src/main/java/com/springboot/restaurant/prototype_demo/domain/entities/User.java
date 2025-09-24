@@ -1,9 +1,10 @@
 package com.springboot.restaurant.prototype_demo.domain.entities;
-
-public record Client(
+public record User(
         String id,
         String name,
-        String email
+        String email,
+        String password,
+        String role
         ) {
 
 }

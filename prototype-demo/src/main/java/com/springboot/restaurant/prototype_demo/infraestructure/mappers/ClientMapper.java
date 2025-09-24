@@ -1,7 +1,7 @@
 package com.springboot.restaurant.prototype_demo.infraestructure.mappers;
 
 import com.springboot.restaurant.prototype_demo.domain.entities.Client;
-import com.springboot.restaurant.prototype_demo.infraestructure.shemas.ClientSchema;
+import com.springboot.restaurant.prototype_demo.infraestructure.schemas.ClientSchema;
 
 public class ClientMapper {
 
@@ -10,6 +10,6 @@ public class ClientMapper {
     }
 
     public static Client fromPersistence(ClientSchema doc) {
-        return new Client(doc.getId(), doc.getNombre(), doc.getEmail());
+        return new Client(doc.getId(), doc.getName(), doc.getEmail());
     }
 }

@@ -1,6 +1,5 @@
 package com.springboot.restaurant.prototype_demo.infraestructure.persistencie;
 
-import org.bson.types.ObjectId;
 import org.springframework.stereotype.Repository;
 
 import com.springboot.restaurant.prototype_demo.app.port.out.ClientRepositoryPort;
@@ -23,7 +22,7 @@ public class ClientRepositoryAdapter implements ClientRepositoryPort {
     }
 
     @Override
-    public Client findById(ObjectId id) {
+    public Client findById(String id) {
         return springClientRepository.findById(id)
                 .map(ClientMapper::fromPersistence)
                 .orElse(null);

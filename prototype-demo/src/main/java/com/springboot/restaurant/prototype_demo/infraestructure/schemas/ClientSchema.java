@@ -1,8 +1,7 @@
-package com.springboot.restaurant.prototype_demo.infraestructure.shemas;
+package com.springboot.restaurant.prototype_demo.infraestructure.schemas;
 
 import java.time.Instant;
 
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -11,28 +10,32 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class ClientSchema {
 
     @Id
-    private ObjectId id;
-    private String nombre;
+    private String id;
+    private String name;
     private String email;
     @Field("time_stamp")
     private Instant timeStamp;
 
-    public ClientSchema(String nombre, String email) {
-        this.nombre = nombre;
+    public ClientSchema(String name, String email) {
+        this.name = name;
         this.email = email;
         this.timeStamp = Instant.now();
     }
 
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
     public String getEmail() {
         return email;
+    }
+
+    public Instant timeStamp() {
+        return timeStamp;
     }
 
 }
